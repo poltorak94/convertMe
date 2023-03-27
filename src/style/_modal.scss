@@ -1,0 +1,204 @@
+.modal {
+    width: 100%;
+    color: $blackLight;
+    background: rgba(21, 14, 24, 0.5);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+
+    &--open {
+        display: block;
+    }
+
+    &__container {
+        max-width: 915px;
+        margin: 30px auto 0;
+        width: 100%;
+        background: $white;
+        padding: 128px 100px 128px 128px;
+        position: relative;
+
+    }
+
+    &__close {
+        background: #2D2934;
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 2;
+        right: 52px;
+        top: 52px;
+        transition: 200ms ease all;
+
+        &-icon {
+            transition: 200ms ease all;
+        }
+
+        &:hover {
+            background: $blue;
+        }
+
+        &:hover &-icon {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 58px;
+        margin-bottom: 24px;
+    }
+
+    &__description {
+        margin: 0 0 68px;
+        opacity: .87;
+    }
+
+    &__form {
+        max-width: 405px;
+
+        &-group {
+            margin-bottom: 24px;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            &-label {
+                font-size: 14px;
+                opacity: .6;
+                font-weight: 500;
+                margin-bottom: 8px;
+                font-family: "Poppins", sans-serif;
+            }
+
+            &-input {
+                width: 100%;
+                border: none;
+                padding: 0 0 8px;
+                border-bottom: 1px solid rgba(35, 37, 54, .2);
+                font-family: "Poppins", sans-serif;
+                font-size: 16px;
+                color: $blackLight;
+                transition: 200ms ease all;
+                outline: none;
+
+                &::placeholder {
+                    font-size: 16px;
+                    color: $blackLight;
+                    opacity: .6;
+                }
+
+                &:focus {
+                    border-color: $blue;
+                }
+            }
+
+            &-textarea {
+                width: 100%;
+                border: none;
+                padding: 0 0 8px;
+                border-bottom: 1px solid rgba(35, 37, 54, .2);
+                font-family: "Poppins", sans-serif;
+                font-size: 16px;
+                color: $blackLight;
+                transition: 200ms ease all;
+                outline: none;
+                overflow-y: hidden;
+                resize: none;
+                min-height: 34px;
+
+                &::placeholder {
+                    font-size: 16px;
+                    color: $blackLight;
+                    opacity: .6;
+                }
+
+                &:focus {
+                    border-color: $blue;
+                }
+            }
+        }
+
+        &-pseudo-submit {
+            margin-top: 32px;
+        }
+
+        &-submit {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1919px) {
+    .modal {
+        &__container {
+            padding: 50px 70px;
+        }
+
+        &__title {
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+        &__description {
+            margin-bottom: 25px;
+        }
+
+        &__form {
+            &-group {
+                margin-bottom: 15px;
+            }
+
+            &-pseudo-submit {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .modal {
+        &__container {
+            max-width: 80%;
+            padding: 50px;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__close {
+            right: 25px;
+            top: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .modal {
+        &__container {
+            max-width: 95%;
+            padding: 25px 20px;
+        }
+        &__title{
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        &__close{
+            width: 30px;
+            height: 30px;
+            right: 10px;
+            top: 10px;
+        }
+    }
+}

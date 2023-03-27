@@ -1,0 +1,112 @@
+.careers {
+    padding: 130px 0 0;
+
+    &__container {
+        position: relative;
+
+        &::after {
+            content: url('../src/img/shapes-careers.svg');
+            position: absolute;
+            right: 0;
+            top: -30px;
+            z-index: 2;
+        }
+    }
+
+    &__title {
+        max-width: 630px;
+        margin: 0 auto 24px;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 58px;
+        text-align: center;
+    }
+
+    &__description {
+        text-align: center;
+        max-width: 630px;
+        margin: 0 auto;
+        color: $blackLight;
+        opacity: 0.87;
+    }
+
+    &__text {
+        font-size: 250px;
+        line-height: 1;
+        font-weight: 900;
+        text-align: center;
+        background-clip: text;
+        background-image: url('../src/img/text-bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        color: transparent;
+    }
+}
+
+@media screen and (max-width: 1919px) {
+    .careers {
+        &__title {
+            font-size: 42px;
+            line-height: 1.2;
+            max-width: 750px;
+        }
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    .careers {
+        &__container {
+            &::after {
+                right: 48px;
+            }
+        }
+
+        padding-top: 80px;
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__text {
+            font-size: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .careers {
+        &__text {
+            font-size: 150px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__container {
+            &::after {
+                content: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .careers {
+        &__title {
+            font-size: 24px;
+        }
+
+        &__text {
+            font-size: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .careers {
+        &__text {
+            font-size: 60px;
+        }
+    }
+}

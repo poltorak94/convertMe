@@ -1,0 +1,32 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    background: #444CFC;
+    transition: 200ms ease all;
+    font-weight: 500;
+    padding: 20px 32px;
+    position: relative;
+
+    &::after {
+        content: url('../src/img/right-arrow.svg');
+        margin-left: 16px;
+        transition: 200ms ease all;
+    }
+
+    &::before {
+        content: url('../src/img/btn-shapes.svg');
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &:hover {
+        background: #000dff;
+
+        &::after {
+            transform: translateX(5px);
+        }
+    }
+}
